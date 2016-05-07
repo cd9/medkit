@@ -1,0 +1,21 @@
+---
+name: admin-home
+url: /admin-home
+animationIn: slideInRight
+animationOut: slideOutLeft
+---
+
+<div class="grid-block ui-animation">
+	<div ng-app=""class="grid-container ui-animation small-8 medium-4 large-3">
+		<div class="card spacer-top">
+			<img src="assets/img/caretaker-login.png" class="login-photo">
+			<div class="small-8 grid-container">
+				<input placeholder="MedKit ID" type="text">
+				<input placeholder="Password" type="text">
+				<a class="login-button" ui-sref="admin-view"><strong>LOGIN<strong></a>
+			</div>
+		</div>
+		<br>
+		<a class="switch-login-button" ui-sref="home">Patient Login</a>
+	</div>
+</div>

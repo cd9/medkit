@@ -1,0 +1,118 @@
+.spacer-top{
+	margin-top:1em;
+}
+
+.margin-auto{
+	margin:auto;
+}
+
+.login-photo {
+	padding:20px 25px 25px 25px;
+}
+
+
+.profile-card{
+	padding:1em 1em 1em 1em;
+}
+
+.left-spacer{
+	padding-left:2em;
+}
+
+.profile-name{
+	padding-left:2em;
+}
+
+.pic-border{
+	padding:3px;
+}
+
+.med-box{
+	padding-top:1em;
+	padding-left:1em;
+}
+
+
+.login-button {
+// Extend the base selector to get core styles
+@extend %button;
+// Use the size mixin to set a size
+@include button-size(
+$size: medium, // tiny, small, medium, or large
+$expand: true
+);
+// Use the style mixin to set visual styles
+@include button-style(
+$background: #a3272d, // Background color
+$background-hover: auto, // Background color on hover. Use "auto" to generate automatically
+$color: #fff, // Text color
+$style: solid // Can be solid or hollow
+);
+&.custom-disabled {
+@include button-disabled;
+}
+
+font-size:16px;
+
+}
+
+.switch-login-button {
+// Extend the base selector to get core styles
+@extend %button;
+// Use the size mixin to set a size
+@include button-size(
+$size: medium, // tiny, small, medium, or large
+$expand: true
+);
+// Use the style mixin to set visual styles
+@include button-style(
+$background: #a3272d, // Background color
+$background-hover: auto, // Background color on hover. Use "auto" to generate automatically
+$color: #fff, // Text color
+$style: hollow // Can be solid or hollow
+);
+&.custom-disabled {
+@include button-disabled;
+}
+
+font-size:16px;
+
+}
+
+.list-card{
+	
+	padding:20px;
+}
+
+.view-header{
+	margin-top:1em;
+	padding-top:1em;
+	padding-bottom:1em;
+	padding-right:1em;
+}
+
+.mobile-header{
+	margin-top:1em;
+	padding-top:1em;
+	padding-left:3em;
+	padding-right:3em;
+	padding-bottom:1em;
+
+}
+
+.img-spacer{
+	margin:1em;
+}
+
+.mobile-icon-spacer {
+	padding:1em;
+}
+
+.mobile-text-padding {
+	padding-left:3em;
+
+}
+
+.tools-menu{
+	margin-top:1em;
+}

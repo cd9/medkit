@@ -1,0 +1,105 @@
+---
+name: admin-view
+url: /admin
+
+patients: 
+  - James Smith
+  - Angelo Bistawrous
+  - Justin Naig
+  - Colin Daly
+  - John Smith
+  - Tim Jones
+  - Bob Jones
+  - Michael Robinson
+---
+
+
+
+<div class="grid-frame vertical">
+
+
+	<!--add patient modal-->
+	<div zf-modal="" id="addPatient" class="tiny dialog">
+	<h5>Add A Patient</h5>
+	<hr>
+	<form>
+		<label>
+		First Name
+		<input placeholder="John" type="text">
+		</label>
+		<label>
+		Last Name
+		<input placeholder="Smith" type="text">
+		</label>
+		<label>
+		Age
+		<input placeholder="45" type="text">
+		</label>
+
+		<input name="sex" value="Male" id="male" type="radio"><label for="male">Male</label>
+		<input name="sex" value="Female" id="female" type="radio"><label for="female">Female</label>
+
+		<a zf-close="" class="button spacer-top">Add Patient</a>
+		<a zf-close="" class="alert button spacer-top">Cancel</a>
+	</form>
+	</div>
+
+
+
+	<!--small screen header-->
+
+	<div class="grid-block card shrink show-for-small-only mobile-header">
+		<div class="grid-block vertical">
+			<div class="grid-content"><h4>Welcome John Smith!</h4></div>
+			<div class="grid-content"><h3>Caretaker 001</h3></div>
+		</div>
+	</div>
+
+	<div class="grid-block shrink show-for-large">
+		<div class="grid-container card medium-8 view-header">
+			<img src="assets/img/header.png" class="medium-5 large-4 float-left img-spacer">
+			<div class="show-for-medium medium-7 float-right inline-block spacer-top"><h4>Welcome John Smith!</h4><h4>Caretaker 001</h4></div>
+		</div>
+	</div>
+
+	<div class="grid-block shrink show-for-medium-only">
+		<div class="grid-container card medium-8 view-header">
+			<img src="assets/img/header.png" class="medium-5 large-4 float-left img-spacer">
+			<div class="show-for-medium medium-7 float-right inline-block spacer-top"><h5>Welcome John Smith!</h5><h5>Caretaker 001</h5></div>
+		</div>
+	</div>
+
+	<div class="grid-block shrink">
+		<div class="grid-container card small-10 medium-8 spacer-top" >
+			<div class="grid-content tools-menu show-for-medium">
+			<a role="button" href="#" zf-open="addPatient" class="button">Add Patient</a>
+			<a role="button" aria-label="submit form" class="button" onClick="display()">Delete Patient</a>
+			<a role="button" aria-label="submit form" class="button">Options</a>
+			</div>
+			<div class="grid-content tools-menu show-for-small-only">
+				<center>
+			<a role="button" href="#" zf-open="addPatient" class="button">Add Patient</a>
+			<a role="button" aria-label="submit form" class="button" onClick="display()">Delete Patient</a>
+			<a role="button" aria-label="submit form" class="button">Options</a>
+			</center>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="grid-block shrink spacer-top">
+		<div class="grid-container card small-10 medium-8 list-card" >
+			<section class="block-list">
+				<header><h4>Current Patients</h4></header>
+				<ul>
+				<li ng-repeat="patient in vars.patients" class="with-chevron">
+					<a class="" ui-sref="manage-profile">
+					<img zf-iconic="" icon="person" size="medium" class="iconic-color-success">
+					{{ patient }}
+					</a>
+				</li>
+				</section>
+		</div>
+
+	</div>
+</div>

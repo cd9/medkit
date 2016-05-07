@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedKit</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/custom.js"></script>
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+
+  </head>
+  <body>
+    <div class="grid-frame vertical">
+
+      <div class="grid-content shrink condense wrap show-for-medium" style="padding: 0;">
+
+        <div class="menu-group primary">
+          <div class="menu-group-left">
+          <ul class="primary menu-bar condense">
+            <li><a ui-sref="#"><strong>MedKit</strong></a></li>
+          </ul>
+          </div>
+
+          <div class="menu-group-right">
+          <ul class="primary menu-bar condense">
+            <li><a ui-sref="home" ><strong>Log Out</strong></a></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-content shrink condense wrap show-for-small-only" style="padding: 0;">
+          <ul class="primary menu-bar expand">
+            <li><a ui-sref="#"><strong>MedKit</strong></a></li>
+            <li><a ui-sref="home" ><strong>Log Out</strong></a></li>
+          </ul>
+      </div>
+
+      <div class="grid-block ui-animation">
+        <div ui-view class="grid-content"></div>
+      </div>
+  </body>
+</html>
